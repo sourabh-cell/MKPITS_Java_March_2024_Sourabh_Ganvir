@@ -4,31 +4,51 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 public class UniqueEmailManagement {
-    UniqueEmail uniqueEmail=new UniqueEmail();
-    Scanner scanner=new Scanner(System.in);
-    HashSet<UniqueEmail> hashSet=new HashSet();
+    Scanner scanner = new Scanner(System.in);
+    HashSet<UniqueEmail> hashSet = new HashSet();
 
 
-    public void addEmail()
+    public void addEmail(String mail) {
+        UniqueEmail uniqueEmail = new UniqueEmail(mail);
+        hashSet.add(uniqueEmail);
+        System.out.println("Email Added Successfully");
+
+    }
+
+    public void removeEmail(String mail)
     {
-        System.out.println("Please Enter the Email Address");
-        String uemail = scanner.next();
-
-            }
-
-    public void removeEmail()
-    {
-        System.out.println("Please enter the Email id to remove");
-        String Email=scanner.next();
-        for (UniqueEmail e:hashSet)
-        {
-            if (e.equals(Email)){
+        for (UniqueEmail e : hashSet) {
+            if (e.getEmail_addreass().equals(mail))
+            {
                 hashSet.remove(e);
+                System.out.println("Email Deleted");
             }
+            else
+            {
+                System.out.println("Email not Found");
+            }
+        }
 
+    }
+
+    public void chkAvailibityMail(String mail) {
+        for (UniqueEmail m : hashSet)
+        {
+            if (m.getEmail_addreass().equalsIgnoreCase(mail))
+            {
+                System.out.println("Email exist");
+                System.out.println(m);
+            }
         }
     }
 
+    public void displayEmail()
+    {
+        for (UniqueEmail e : hashSet)
+        {
+            System.out.println(e);
+        }
 
+    }
 
 }
