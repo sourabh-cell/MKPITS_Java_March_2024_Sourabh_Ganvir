@@ -20,7 +20,7 @@ public class LinkedListDemo1 {
         list.addLast(74);
 
 
-        //printing The ArrayList
+        //printing The LinkedList
         System.out.println(list);
     }
 }
