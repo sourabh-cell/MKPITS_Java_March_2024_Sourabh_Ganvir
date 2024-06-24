@@ -1,0 +1,41 @@
+create table book 
+   (
+	book_id int (pk),
+	title char(15),
+	author_id int (FK),
+	price int
+	qoh int
+   )
+
+   create table authors
+   (
+	author_id int(PK),
+	first_name char,
+	last_name char,
+	email
+   )
+
+   create table customer
+	
+   (
+	customer_id int(PK),
+	first_name char,
+	last_name char,
+	email char,
+   )
+    
+   create table order
+   (
+	order_id int(PK),
+	order_date date,
+	customer_id int(FK),
+	book_id int(FK),
+	quantity int
+   )
+
+   create table sales
+   (
+	sale_id(PK)
+	order_id(FK)
+	total
+	sale_date
