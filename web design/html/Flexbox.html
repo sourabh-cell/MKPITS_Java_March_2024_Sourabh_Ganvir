@@ -1,0 +1,81 @@
+<!-- ### 4. **Creating a Flexbox Layout**
+**Problem Statement:**
+Design a layout using Flexbox that has a header, footer, and a main content area with two columns. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+      
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.header, .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    margin: 1em 0;
+}
+
+.column {
+    flex: 1;
+    padding: 1em;
+    background-color: #f4f4f4;
+    margin: 0.5em;
+}
+
+.left-column {
+    background-color: #e3e3e3;
+}
+
+.right-column {
+    background-color: #d3d3d3;
+}
+    </style>
+</head>
+<body>
+    
+   <center> <H1 style="align-items: center;">FlexBox Layout</H1> </center>
+
+   <div class="container">
+    <header class="header">
+        Header
+    </header>
+    <main class="main-content">
+        <div class="column left-column">
+            Left Column
+        </div>
+        <div class="column right-column">
+            Right Column
+        </div>
+    </main>
+    <footer class="footer">
+        Footer
+    </footer>
+
+
+</body>
+</html>
