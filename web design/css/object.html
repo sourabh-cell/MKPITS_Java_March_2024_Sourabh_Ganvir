@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object through new</title>
+
+
+</head>
+<body>
+    <script>
+
+        //Through Literals
+        Sourabh = {
+          height:5 ,
+          weight:90 , 
+          address:"Dighori"
+    }
+
+    document.write("<div>"+Sourabh.height+" "+Sourabh.weight+" "+Sourabh.address+"</div>"+"<br>");
+
+        // through new keyword
+        var emp = new Object();
+        emp.name = "Sourabh";
+        emp.salary = 5000;
+
+        document.write(emp.name+"  "+emp.salary+"<br>");
+
+    
+
+
+        //through constructor
+        function Book(title,price){  //constructor function
+            this.title=title;
+            this.price=price;
+            this.changePrice=changePrice; //declaring property to change the price
+
+            function changePrice(newprice)  //declaring function to change the price
+            { 
+                this.price=newprice;
+            }
+        }
+
+        book = new Book("Andekhi",800);
+
+        document.write("<h1>"+book.title+"  "+book.price+"</h1>"+"<br>");
+    
+    
+        //to change the property we mus first declare prperty first and then function for changing property
+
+        book.changePrice(1000)
+
+        document.write(book.title+"  "+book.price+"<br>");
+
+         var arraybook=Object.values(book);  
+         document.write(arraybook[1]);
+    </script>
+    
+</body>
+</html>

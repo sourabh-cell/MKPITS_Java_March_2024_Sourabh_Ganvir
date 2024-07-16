@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+    <script>
+
+     function getdata(){
+        var data = prompt("Enter your name");
+        return data;
+     }
+
+     function showdata(callback){
+        var name = callback();
+        alert("Hi.."+name);
+     }
+      
+     
+
+     function showdataWithTimeOut(callback,callbacktimer){
+        
+        var name = callback();
+        setTimeout( function ( ) { alert( "Hi..."+name ); }, 10000 );
+     }
+
+   
+
+
+    </script>
+</head>
+<h1>without time out</h1>
+<input type="button" value="ClickMe" onclick="showdata(getdata)">
+
+<br><br>
+
+<h1>with time out</h1>
+<input type="button" value="ClickMe" onclick="showdataWithTimeOut(getdata)">
+<body>
+    
+</body>
+</html>

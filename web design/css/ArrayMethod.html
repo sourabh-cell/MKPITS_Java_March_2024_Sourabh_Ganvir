@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrayMethod</title>
+    <script>
+        function chkValues(value){ return 0 }
+    </script>
+</head>
+<body>
+    <script>
+
+stud_name=["akshay","ashok","Ganvir","aruna"]; // array
+
+
+//Array through new keyword
+
+var fruit_name= new Array();
+
+document.write("copying one value of array within array<br>");
+var result=stud_name.copyWithin(1,0);  //(target,start,end)
+document.writeln(result);
+
+document.writeln("creating array by passing string<br>");
+var result1=Array.from("hello i am sourabh");
+document.writeln(result1);
+console.log(result1);
+
+    </script>
+</body>
+</html>
