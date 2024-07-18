@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="newConverter.js"></script>
+    </head>
+    <body>
+        <div style="align-items: center;">
+            <h1 style="color: maroon; text-align: center;">Welcome to currency converter !</h1>
+            
+        </div>
+<br><br><br><br>
+        <div>
+            <input type="text" placeholder="Enter Amount" id="newinput">
+            <label>Convert from</label>
+            <select name="convert from" id="fromselect">
+            <option id="11" value="INR" selected>INR</option>
+            <option id="12" value="USD">USD</option>
+            <option id="13" value="POUND">POUND</option>
+            <option id="14" value="YEN">YEN</option>
+            </select>
+            <label>Convert to</label>
+            <select name="convert to" id="toselect">
+                <option id="21" value="INR">INR</option>
+                <option id="22" value="USD" selected>USD</option>
+                <option id="23" value="POUND">POUND</option>
+                <option id="24" value="YEN">YEN</option>
+            </select>
+            <input type="button" value="Convert" onclick="convert((document.getElementById('fromselect')).value,(document.getElementById('toselect')).value,(document.getElementById('newinput')).value)">
+            <label id="output3" style="font-size: 20px;"></label>
+        </div>
+    </body>
+</html>

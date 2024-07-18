@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+
+</head>
+<body>
+    <script>
+        fetchCurrencyData = () => {
+    fetch("https://numbersapi.p.rapidapi.com/7/21/date?fragment=true&json=true", {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "x-rapidapi-host: instagram-scraper-2022.p.rapidapi.com",
+            "x-rapidapi-key": "d4adce889emshcf2a6e0be520974p1a1964jsn8020d5e030a9"
+        }
+    })
+    .then(response => response.json()) // Getting the actual response data
+    .then(data => {         
+        console.log(data);
+    })
+    .catch(err => {
+        console.log(err);
+    }); 
+}
+
+
+
+    </script>
+    
+</body>
+</html>

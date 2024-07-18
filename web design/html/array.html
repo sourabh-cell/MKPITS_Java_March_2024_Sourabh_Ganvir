@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+ 
+    <script>
+
+        //array through literals
+        document.write("array through literals");
+        stud_name=["akshay","ashok","Ganvir"]; // array
+
+        for(i=0;i<stud_name.length;i++)
+        {
+            document.write(stud_name[i]+"<br><br>");
+        }
+
+
+        //Array through new keyword
+
+        document.write("array through literals");
+
+        var fruit_name= new Array();
+
+        fruit_name[0]="Apple";
+        fruit_name[1]="orange";
+        fruit_name[3]="banana";
+
+        for(i=0;i<fruit_name.length;i++)
+        {
+            document.write(fruit_name[i]+"<br><br>");
+        }
+
+        //array through constructor
+
+        document.write("<br>array through constructor<br>");
+
+        cities = new Array("nagpur","pune","chandrapur");
+
+        document.write(cities);
+
+
+
+    </script>
+ 
+</body>
+</html>

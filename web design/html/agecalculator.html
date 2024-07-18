@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <script>
+        function agecal()
+        {
+        var input = (document.getElementById("age")).value;
+      
+        var dob=input.split("-");
+        var date=new Date();
+        var day = date.getDate();
+        var month = date.getMonth()+1;
+        var year = date.getFullYear();
+       
+        
+      
+        document.getElementById("output").innerHTML=total_year+" "+"Years"+total_month+" "+"Months"+total_day+" "+"Days";
+        }
+    </script>
+</head>
+<body>
+    <div style="padding: 7%;">
+        <center>   
+        <label for="">Please Enter your age in format (DD-MM-YYYY)</label><br><br>    
+        <input type="text" id="age" placeholder="Enter your Age" style="padding: 1%; "><br><br>
+        <button type="button" onclick=agecal(this.form)>Calculate Age</button><br><br>
+        <p id="output"></p>
+        </center>
+    </div>
+</body>
+</html>
