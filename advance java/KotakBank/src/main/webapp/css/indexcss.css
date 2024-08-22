@@ -1,0 +1,153 @@
+@charset "ISO-8859-1";
+
+
+
+    body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f7f9;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+.header {
+    background: linear-gradient(to top left,#ed1c24);
+    color: #333;
+    text-align: center;
+    padding: 1.5rem 0;
+    position: relative;
+    
+     .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .nav-link {
+            background-color: #3e8e41;
+        }
+}
+
+.header .logo {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: #add8e6; /* Light Blue */
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    color: #333;
+    margin: 0 1.5rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffdd57;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('bank-background.jpg') no-repeat center center/cover;
+    color: #333;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.intro {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem 3rem;
+    border-radius: 10px;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ffdd57;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ffc107;
+}
+
+.footer {
+    background-color: #87cefa; /* Light Sky Blue */
+    color: #333;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}

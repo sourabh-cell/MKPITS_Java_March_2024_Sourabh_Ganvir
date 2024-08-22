@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Database Demo</title>
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(to left bottom, #050637, #251966, #542395, #8c25c2, #cc12eb);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #main {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+        .form-container {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: #ffffff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        #div1, #div2, #div3, #div4 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<form action="http://localhost:8085/Db_connectivity/DbDemo">
+
+<div id="main"> 
+
+<Bold><h1>Registration Form</h1></Bold>
+
+<div id="div1">
+<input type="text" class="form-container" placeholder="name"  name="name" >
+</div>
+
+<div id="div2">
+<input type="text" class="form-container" placeholder="Address"  name="add" >
+</div>
+
+<div id="div3">
+<input type="text" class="form-container" placeholder="City"  name="ct" >
+</div>
+
+<div id="div4">
+<input type="submit" value="Add Student" name="submit">
+
+</div>
+
+</div>
+
+</form>
+</body>
+</html>

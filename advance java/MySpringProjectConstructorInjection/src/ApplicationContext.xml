@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean id="s1" class="com.example.Student">
+    <constructor-arg value="Sourabh" ></constructor-arg>
+    </bean>
+   
+    <bean id="s2" class="com.example.Student">
+    <constructor-arg value="60" type="int"></constructor-arg>
+    </bean>
+
+
+   <bean id="s3" class="com.example.Student">
+   <constructor-arg value="Sourabh" ></constructor-arg>
+   <constructor-arg value="60" type="int"></constructor-arg>
+   </bean>
+   
+    <bean id="a1" class="com.example.Address">               <!--loading Address bean -->
+    <constructor-arg value="Dighori" ></constructor-arg>
+    <constructor-arg value="Nagpur" ></constructor-arg>
+    <constructor-arg value="Maharashtra" ></constructor-arg>
+    </bean>
+    
+    <bean id="s4" class="com.example.Student">              
+    <constructor-arg value="Sourabh" ></constructor-arg>
+    <constructor-arg value="90" type="int" ></constructor-arg>
+    <constructor-arg>
+    <ref bean="a1"/>                             <!--injecting Address bean obj to student constructor -->
+    </constructor-arg>
+    </bean>
+    
+    <bean id="s5" class="com.example.Student">              
+    <constructor-arg value="Sourabh" ></constructor-arg>
+    <constructor-arg value="90" type="int" ></constructor-arg>
+    <constructor-arg>
+    <ref bean="a1"/>                             <!--injecting Address bean obj to student constructor -->
+    </constructor-arg>
+    <constructor-arg>
+    <list>                                         <!--injecting list to student constructor -->
+    <value>Physics</value>
+    <value>Chemistry</value>
+    <value>Maths</value>
+    </list>
+    </constructor-arg>
+    </bean>
+   
+  <bean id="s6" class="com.example.Student">              
+    <constructor-arg value="Sourabh" ></constructor-arg>
+    <constructor-arg value="90" type="int" ></constructor-arg>
+    <constructor-arg>
+    <ref bean="a1"/>                             <!--injecting Address bean obj to student constructor -->
+    </constructor-arg>
+    <constructor-arg>
+    <list>                                         <!--injecting list to student constructor -->
+    <value>Physics</value>
+    <value>Chemistry</value>
+    <value>Maths</value>
+    </list>
+    </constructor-arg>
+    <constructor-arg>
+    <map>
+    <entry key="Physics" value="60"></entry>
+    <entry key="Chemistry" value="70"></entry>
+    <entry key="Maths" value="80"></entry>
+    </map>
+    </constructor-arg>
+    </bean>
+   
+</beans>
